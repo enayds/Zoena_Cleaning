@@ -1,46 +1,67 @@
 // first collect all the slide elements
 
-const links = document.querySelectorAll(".slider-item");
+const slides = document.querySelectorAll(".carousel-item");
 
-const btns = document.querySelectorAll(".slide-btn");
+const btns = document.querySelectorAll(".slider-btn");
 
 const testBtns = document.querySelectorAll(".testimony-a");
+
 
 // initiate a count variable to control the slide
 var count = 0;
 
-btns.forEach((button, index) => {
-    button.addEventListener("click", () => {
-        count = index
+btns.forEach((btn, index) => {
+    
+    btn.addEventListener("click", () => {
+        // first remove all the active class from all buttons# and slides
         btns.forEach(btn => {
-            btn.classList.remove("btn-selected")
+            btn.classList.remove("active");
         })
 
-        button.classList.add("btn-selected")
+        slides.forEach(slide => {
+            slide.classList.remove("active");
+        })
+
+        // add the active class for the specific btn and slide clicked on
+
+        btn.classList.add('active');
+        slides[index].classList.add("active");
+        count = index;
     })
+
+    
 })
 
-testBtns.forEach(button => {
-    button.addEventListener("click", () => {
+// working on the automatic slide function
+
+setInterval(function () {
+    btns.forEach(btn => {
+        btn.classList.remove('active');
+    })
+
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    })
+
+    slides[count].classList.add("active");
+    btns[count].classList.add("active");
+    count ++;
+    if (count > 2) {
+        count = 0
+    }
+}, 5000);
+
+
+
+// i cant seem to find and save the slide button link so i will have to do it directly
+
+testBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
         testBtns.forEach(btn => {
-            btn.classList.remove("test-selected")
+            btn.classList.remove('test-selected')
         })
 
-        button.classList.add("test-selected")
+        btn.classList.add('test-selected')
     })
 })
 
-
-// setInterval(function () {
-//     count += 1
-//     btns.forEach((button, index) => {
-//         button.addEventListener("click", () => {
-//             btns.forEach(btn => {
-//                 btn.classList.remove("btn-selected")
-//             })
-//             button.classList.add("btn-selected")
-//         })
-//     })
-
-//     btns[Math.abs(count % 3)].click()
-// }, 5000)
