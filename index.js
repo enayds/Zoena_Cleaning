@@ -65,3 +65,20 @@ testBtns.forEach(btn => {
     })
 })
 
+// functionality for the form
+// colleting the elements i will be using for the functionality
+const openBtn = document.querySelectorAll(".form-button")
+const closeBtn = document.querySelector(".close-button")
+const formItem = document.querySelector(".form")
+
+// close button
+closeBtn.addEventListener("click", () => {
+    formItem.classList.remove('active');
+})
+
+// open button
+openBtn.forEach(btn => {
+    btn.addEventListener("click", () => {
+        formItem.classList.add("active")
+    })
+})

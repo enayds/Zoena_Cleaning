@@ -26,9 +26,9 @@
                 <img src="images/logo-removed.png" alt="logo-image">
             </div>
             <div class="right-nav">
-                <a href="#" class="book-btn">
+                <button class="book-btn form-button">
                     Book Now!
-                </a>
+                </button>
             </div>
         </div>
     </nav>
@@ -43,7 +43,7 @@
                 <div class="info-div">
                     <p class="large-title">Come Home Happy</p>
                     <p class="small-title">We will clean for you!</p>
-                    <a href="#" class="book-btn l-btn top-btn">Book A Cleaning Now</a>
+                    <buttton class="book-btn l-btn top-btn form-button">Book A Cleaning Now</button>
                 </div> 
             </div>
             <div class="carousel-item">
@@ -51,7 +51,7 @@
                 <div class="info-div">
                     <p class="large-title">Come Home Happy</p>
                     <p class="small-title">We will clean for you!</p>
-                    <a href="#" class="book-btn l-btn top-btn">Book A Cleaning Now</a>
+                    <button href="#" class="book-btn l-btn top-btn form-button">Book A Cleaning Now</button>
                 </div> 
             </div>
             <div class="carousel-item">
@@ -59,7 +59,7 @@
                 <div class="info-div">
                     <p class="large-title">Come Home Happy</p>
                     <p class="small-title">We will clean for you!</p>
-                    <a href="#" class="book-btn l-btn top-btn">Book A Cleaning Now</a>
+                    <button class="book-btn l-btn top-btn form-button">Book A Cleaning Now</button>
                 </div> 
             </div>
         </div>
@@ -104,7 +104,7 @@
         </div>
         <div class="appointment-div">
             <p class="some-text">Make Your Home Clean Now!</p>
-            <a href="#" class="book-btn l-btn">Book Appointment</a>
+            <button class="book-btn l-btn form-button">Book Appointment</button>
         </div>
 
         <div class="reasons-div">
@@ -216,7 +216,7 @@
 
         <div class="appointment-div">
             <p class="some-text">Schedule An Appointment</p>
-            <a href="#" class="book-btn l-btn">Book Appointment</a>
+            <button class="book-btn l-btn form-button">Book Appointment</button>
         </div>
 
 
@@ -271,7 +271,7 @@
         </div>
     </section>
     <div class="book-div">
-        <a href="#" class="book-btn l-btn new-class">Book Appointment</a>
+        <button class="book-btn l-btn new-class form-button">Book Appointment</button>
         <span class="blue-ball top-left"></span>
         <span class="blue-ball bottom-right"></span>
     </div>
@@ -305,7 +305,27 @@
             </div>
         </div>
     </section>
+    <div class="form">
+        <p class="close-button">X</p>
+        <form action="">
+            <label for="name">Full name</label>
+            <input type="text" id = "name" placeholder="enter name">
 
+            <label for="email">Email Address</label>
+            <input type="email" id = "email" placeholder="enter mail" required>
+
+            <label for="email">Phone</label>
+            <input type="text" id = "phone" placeholder="enter phone" required>
+
+            <label for="cleaning-type">Select type of cleaning</label>
+            <select name="cleaning options" id="cleaning-type">
+                <option value="standard">Standard Cleaning</option>
+                <option value="movein">Move-In Cleaning</option>
+                <option value="moveout">Move-Out Cleaning</option>
+            </select>
+
+            <input type="submit" value="Submit">
+        </form>
     <script src="index.js"></script>
 </body>
 </html>
