@@ -82,3 +82,17 @@ openBtn.forEach(btn => {
         formItem.classList.add("active")
     })
 })
+
+
+// working on the mobile menu btn for both closing and opening the pane
+var menuPane = document.querySelector(".mobile-menu");
+var menuOpen = document.querySelector(".menu-btn");
+var menuClose = document.querySelector(".close-btn");
+
+menuOpen.addEventListener("click", () => {
+    menuPane.classList.add("opened");
+});
+
+menuClose.addEventListener("click", () => {
+    menuPane.classList.remove("opened");
+});
