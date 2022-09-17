@@ -96,3 +96,25 @@ menuOpen.addEventListener("click", () => {
 menuClose.addEventListener("click", () => {
     menuPane.classList.remove("opened");
 });
+
+
+// faq page fuctionality
+
+const faqBtn = document.querySelectorAll(".open-qa-btn");
+const faqAnswer = document.querySelectorAll(".response");
+
+// create a function that will check if the faq button is facing up or down before opening or closing an answer
+
+faqBtn.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        if (getComputedStyle(faqAnswer[index]).position == 'absolute') {
+            faqAnswer[index].classList.add("opened");
+            faqBtn[index].classList.add('up');
+        }
+
+        else {
+            faqAnswer[index].classList.remove("opened");
+            faqBtn[index].classList.remove('up');
+        }
+    });
+});

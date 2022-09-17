@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap');
 
 
 
@@ -6,12 +7,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
+    /*     font-family: 'Oswald', sans-serif;
+ */
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     position: relative;
-    max-width: 1200px;
 }
 
 img{
@@ -997,9 +999,9 @@ nav {
     border-radius: 10px;
     align-items: center;
     transform: scale(1.5);
-    top: -550px;
-    transition: transform ease-in-out .5s,
-    opacity ease-in-out .5s;
+    top: -1150px;
+    transition: transform ease-in .5s,
+    opacity ease-in .5s;
     opacity: 0;
     z-index: 555;
 }
@@ -1008,11 +1010,10 @@ nav {
 }
 
 .form.active {
-    top: 100px;
+    top: 30px;
     right: 0;
     transform: scale(1);
     opacity: 1;
-    transition: transform .5s, opacity .5s;
 }
 
 label {
@@ -1028,6 +1029,8 @@ input {
     border-radius: 5px;
     margin: 8px 0;
 }
+
+
 
 input[type = submit] {
     width: 40%;
@@ -1049,6 +1052,14 @@ select {
     font-size: 15px;
 }
 
+textarea {
+    width: 100%;
+    color: #7797e6;
+    background: white;
+    height: fit-content;
+    padding: 5px 10px;
+}
+
 .close-button {
     background: grey;
     padding: 5px;
@@ -1062,4 +1073,139 @@ select {
     right: -10px;
     top: -10px;
     cursor: pointer;
+}
+
+
+/* faq page styling  */
+
+/* banner section */
+#banner {
+    width: 100%;
+    background: white;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(rgba(0,0,0,.5), #7797e6), url(images/question.webp);margin-top: 9em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+}
+
+.banner-info {
+    padding: 24px;
+    width: 92%;
+    margin: auto;
+}
+
+.question-title {
+    font-style: italic;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+#question-div {
+    width: 100%;
+    background: #efefef;
+}
+
+.question-section {
+    width: 92%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.conversation {
+    width: 100%;
+    align-items: left;
+    border: 1px solid black;
+    padding: 24px;
+    transition: all 1s;
+}
+
+.client-QA {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 10px 0;
+    background: #7797e6;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.open-qa-btn {
+    width: 40px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.open-qa-btn.up {
+    transform: rotate(180deg);
+}
+
+.response {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    top: -40px;
+    transition: 1s  ;
+}
+
+.response.opened {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+    top: 0;
+}
+
+.enquiry-title {
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+    word-spacing: 5px;
+
+}
+
+.enquiry {
+    background: #7797e6;
+    display: block;
+    padding: 24px;
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 10px;
+    align-items: center;
+}
+
+/* media screen for the enqiury form */
+
+@media screen and (max-width: 1070px) {
+    .enquiry {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .enquiry {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .enquiry {
+        width: 80%;
+    }
+    .enquiry-title {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .enquiry {
+        width: 95%;
+    }
+    .enquiry-title {
+        font-size: 15px;
+    }
 }
