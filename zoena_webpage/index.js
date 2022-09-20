@@ -118,3 +118,11 @@ faqBtn.forEach((btn, index) => {
         }
     });
 });
+
+
+
+// // just checking something
+
+// let ban = document.getElementById("banner");
+
+// console.log(ban.scrollTop)
