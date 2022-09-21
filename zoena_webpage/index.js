@@ -121,8 +121,29 @@ faqBtn.forEach((btn, index) => {
 
 
 
-// // just checking something
+// adding fuctionality to the extra details btn
 
-// let ban = document.getElementById("banner");
+//  first we collect the elements needed
 
-// console.log(ban.scrollTop)
+var detBtn = document.querySelectorAll(".view-btn");
+var detWindow = document.querySelectorAll(".more-details-section");
+var closeDetBtn = document.querySelectorAll(".done-btn");
+
+// adding onclick function to the buttons 
+detBtn.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        // remove all existing classes from each details window
+        detWindow.forEach(win  => {
+            win.classList.remove("active")
+        })
+        detWindow[index].classList.add("active")
+    });
+});
+
+// closing the details window
+
+closeDetBtn.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+        detWindow[index].classList.remove("active");
+    })
+})

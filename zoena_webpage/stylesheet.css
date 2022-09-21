@@ -1626,6 +1626,23 @@ textarea {
     word-spacing: 10px;
 }
 
+.view-btn {
+    margin-top: 10px;
+    background: #7797e6;
+    padding: 10px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    transition: .7s;
+}
+
+.view-btn:hover {
+    color: #7797e6;
+    background: white;
+}
+
 
 /* procedure section styling */
 
@@ -1846,5 +1863,58 @@ textarea {
 
     .procedure-desc-info {
         font-size: 15px;
+    }
+}
+
+
+
+/* styling the more details window */
+.more-details-section {
+    width: 50%;
+    background: #7797e6;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    position: fixed;
+    padding-left: 25px;
+    padding-right: 10px;
+    top: 200px;
+    left: 200px;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: transform 1s;
+    z-index: -555;
+}
+
+.long-line {
+    width: 80%;
+    border:1px solid gold;
+}
+
+.details-full {
+    text-align: justify;
+    margin: 10px auto;
+}
+
+
+.done-btn {
+    margin-top: 50px;
+    padding: 5px 55px;
+    color: #7797e6;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.more-details-section.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 555;
+}
+
+@media screen and (max-width: 920px) {
+    .more-details-section {
+        top: 120px;
+        width: 90%;
+        left: 10px;
     }
 }
