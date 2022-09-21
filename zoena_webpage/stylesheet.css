@@ -62,7 +62,7 @@ nav {
 
 .left-nav {
     text-align: left;
-    flex-basis: 30%;
+    flex-basis: 40%;
     margin: auto;
     font-weight: 600;
     font-size: 20px;
@@ -77,6 +77,13 @@ nav {
 
 .left-nav ul li {
     cursor: pointer;
+    list-style: disc;
+    padding-right: 5px;
+    transition: .5s;
+}
+
+.left-nav ul li:hover a {
+    color: #7797e6;
 }
 
 .logo-div {
@@ -173,11 +180,20 @@ nav {
 
 .slidein-menu ul li {
     margin: 25px 0;
+    transition: .5s;
 }
 
-
+.slidein-menu ul li:hover a {
+    color: white;
+}
 
 /* media screen for navigation bar */
+@media screen and (max-width:1100px) {
+    .left-nav {
+        font-size: 18px;
+    }
+}
+
 @media screen and (max-width:950px) {
     .left-nav {
         font-size: 15px;
@@ -189,7 +205,8 @@ nav {
     
 }
 
-@media screen and (max-width:750px) {
+
+@media screen and (max-width:850px) {
     .left-nav {
         display: none;
     }
@@ -359,7 +376,7 @@ nav {
     z-index: 3;
     position: absolute;
     top: 0;
-    left: 30%;
+    left: 20%;
     text-align: center;
 }
 
@@ -404,9 +421,19 @@ nav {
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
+    .info-div {
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 690px) {
     .large-title {
         font-size: 40px;
+    }
+
+    .info-div {
+        left: 10%;
     }
 
     .small-title {
@@ -440,7 +467,7 @@ nav {
     }
 
     .info-div {
-        left: 20%;
+        left: 10%;
     }
 }
 
@@ -546,7 +573,17 @@ nav {
     padding: 10px;
 }
 
+@media screen and (max-width:1120px) {
+    .tiles-desc {
+        padding: 38px;
+    }
+}
+
 @media screen and (max-width: 950px) {
+    .tiles-desc {
+        padding: 32px;
+    }
+
     .some-text {
         font-size: 25px;
     }
@@ -565,7 +602,7 @@ nav {
 
 @media screen and (max-width: 850px) {
     .tiles-desc {
-        padding: 30px;
+        padding: 28px;
     }
 
     .mirror-image{
@@ -574,7 +611,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 710px) {
     .flex-div {
         flex-direction: column;
     }
@@ -806,7 +843,7 @@ nav {
 .bottom-sec {
     margin-top: 15px;
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 25px;
     text-align: left;
 }
@@ -846,6 +883,12 @@ nav {
 
 /* media screen for smaller devices */
 
+@media screen and (max-width:1020px) {
+    .bottom-sec {
+        font-size: 17px;
+    }
+}
+
 @media screen and (max-width:850px) {
     .testimony-div img {
         width: 70px;
@@ -855,7 +898,7 @@ nav {
         font-size: 20px;
     }
     .bottom-sec {
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 
@@ -863,13 +906,18 @@ nav {
     .bottom-sec {
         font-size: 15px;
     }
-}
 
-@media screen and (max-width:700px) {
     .testimony-slides {
         flex-direction: column;
         flex-wrap: nowrap;
     }
+
+    .slider > a {
+        top: 12px;
+    }
+}
+
+@media screen and (max-width:700px) {
     .client-name {
         font-size: 23px;
     }
@@ -879,7 +927,7 @@ nav {
     }
 
     .slider > a {
-        top: -5px;
+        top: 12px;
         padding: 10px;
     }
     .bottom-right {
@@ -1601,7 +1649,7 @@ textarea {
 
 .intro-large {
     font-size: 25px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .big-zoena {
@@ -1652,7 +1700,7 @@ textarea {
 
 .procedure-desc-title p {
     font-size: 25px;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .procedure-desc-info {
