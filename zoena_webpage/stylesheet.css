@@ -253,6 +253,7 @@ nav {
     margin-top: 1em;
     background: #efefef;
     position: relative;
+    width: 100%;
 }
 
 .carousel {
@@ -1045,7 +1046,7 @@ nav {
     background: #7797e6;
     display: block;
     padding: 24px;
-    width: 400px;
+    width: 90%;
     margin: auto;
     position: fixed;
     left: 0;
@@ -1057,6 +1058,27 @@ nav {
     opacity ease-in .5s;
     opacity: 0;
     z-index: 555;
+}
+
+@media screen and (min-width:600px) {
+    .form {
+        width: 90%;
+    }
+
+}
+
+@media screen and (min-width:750px) {
+    .form {
+        width: 50%;
+    }  
+}
+
+@media screen and (min-width:950px) {
+    .form {
+        width: 600px;
+    }
+
+    
 }
 .form-button {
     cursor: pointer;
